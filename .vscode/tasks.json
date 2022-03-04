@@ -1,0 +1,27 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "lcov",
+            "type": "shell",
+            "command": "lcov -c -d ./build -o ./build/lcov.info && genhtml -o ./build/lcov_html ./build/lcov.info",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "remove gcda",
+            "type": "shell",
+            "command": "find ./ -name \"*.gcda\" -exec rm {} \\;",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        }
+    ]
+}
