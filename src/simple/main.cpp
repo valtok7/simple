@@ -1,6 +1,6 @@
 #include "header.h"
-#include "utility.h"
-#include "calc.h"
+#include "utility_if.h"
+#include "calc_if.h"
 
 int main()
 {

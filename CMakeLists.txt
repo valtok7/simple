@@ -38,10 +38,6 @@ include(CPack)
 #include(CTest)
 enable_testing()
 
-# Compile Option
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -coverage")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -coverage")
-
 # subdirectory
 add_subdirectory(src/calc)
 add_subdirectory(src/utility)

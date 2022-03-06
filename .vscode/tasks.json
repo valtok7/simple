@@ -4,9 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "lcov",
+            "label": "Build all",
             "type": "shell",
-            "command": "lcov -c -d ./build -o ./build/lcov.info && genhtml -o ./build/lcov_html ./build/lcov.info",
+            "command": "cd ${workspaceFolder}/build && cmake --build . --target all",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
@@ -14,7 +14,27 @@
             }
         },
         {
-            "label": "remove gcda",
+            "label": "Build clean",
+            "type": "shell",
+            "command": "cd ${workspaceFolder}/build && cmake --build . --target clean",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Execute lcov",
+            "type": "shell",
+            "command": "lcov -c -d ./build -o ./build/lcov.info && genhtml -o ./build/lcov_html ./build/lcov.info",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Remove gcda",
             "type": "shell",
             "command": "find ./ -name \"*.gcda\" -exec rm {} \\;",
             "problemMatcher": [],
