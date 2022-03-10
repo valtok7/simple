@@ -8,4 +8,3 @@ add_executable(test_simple ${UNITTEST_SRC})
 gtest_add_tests(TARGET test_simple)
 
 target_link_libraries(test_simple PRIVATE calc utility gtest gmock pthread gtest_main)
-
