@@ -4,4 +4,5 @@
 TEST(calc, test1)
 {
     ASSERT_EQ(Add(1, 5), 6);
+    ASSERT_EQ(Add(1, 5), 7);
 }
