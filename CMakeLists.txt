@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 
+# Include
+include(DoClangTidy.cmake)
+
 # Use ccache
 option(CCACHE_ENABLE
   "If the command ccache is avilable, use it for compile."

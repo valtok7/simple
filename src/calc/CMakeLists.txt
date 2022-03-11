@@ -10,3 +10,4 @@ target_include_directories(calc PUBLIC
     /usr/local/fftw3/include
 )
 target_link_libraries(calc PUBLIC fftw3)
+#clang_tidy(calc)

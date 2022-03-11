@@ -8,4 +8,6 @@ add_library(utility STATIC
 )
 target_include_directories(utility
     PUBLIC ../include
-    )
+)
+
+#clang_tidy(utility)
