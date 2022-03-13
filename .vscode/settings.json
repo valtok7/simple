@@ -1,1 +1,11 @@
-{}
+{
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "C_Cpp.codeAnalysis.clangTidy.checks.enabled": [
+        "bugprone-macro-parentheses",
+        "bugprone-redundant-branch-condition",
+        "cppcoreguidelines-init-variables",
+        "cppcoreguidelines-pro-type-member-init",
+        "misc-redundant-expression",
+        "bugprone-assert-side-effect",
+    ]
+}
