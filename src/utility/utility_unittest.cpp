@@ -8,7 +8,7 @@ TEST(test_utility, test1)
 
 TEST(test_utility, test2)
 {
-    ASSERT_EQ(1, 1);
+    ASSERT_EQ(1, 2);
 }
 
 TEST(test_utility, test3)

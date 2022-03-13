@@ -26,7 +26,7 @@
         {
             "label": "Execute lcov",
             "type": "shell",
-            "command": "lcov -c -d ./build -o ./build/lcov.info && genhtml -o ./build/lcov_html ./build/lcov.info",
+            "command": "lcov -c -d ./build -o lcov.info && lcov -r lcov.info */googletest/* test/* */c++/* -o lcov.info && mkdir coverage && mv lcov.info ./coverage/ && gcovr --filter src/ --print-summary --html-details -o coverage/index.html",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
