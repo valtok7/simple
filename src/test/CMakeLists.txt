@@ -6,5 +6,6 @@ add_executable(test_simple ${UNITTEST_SRC})
 gtest_add_tests(TARGET test_simple)
 
 target_link_libraries(test_simple PRIVATE calc utility gtest gmock pthread gtest_main)
-
-#clang_tidy(test_simple)
+#if(CLANG_TIDY_EXE)
+#    set_target_properties(test_simple PROPERTIES CXX_CLANG_TIDY "${DO_CLANG_TIDY}" ) 
+#endif()

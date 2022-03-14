@@ -9,5 +9,6 @@ add_library(utility STATIC
 target_include_directories(utility
     PUBLIC ../include
 )
-
-#clang_tidy(utility)
+if(CLANG_TIDY_EXE)
+    set_target_properties(utility PROPERTIES CXX_CLANG_TIDY "${DO_CLANG_TIDY}" ) 
+endif()
